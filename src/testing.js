@@ -8,7 +8,7 @@ function fun(fn, count, ...args) {
     return performance.now() - start;
 }
 
-function testSpeed(fn, name) {
+function testLeftpad(fn, name) {
     [10, 100, 1000, 10000].forEach(x => {
         [10, 100, 1000, 10000].forEach(y => {
             console.log(name, x, y, fun(fn, x, "foo", y));
@@ -16,18 +16,20 @@ function testSpeed(fn, name) {
     });
 }
 
-function print(fn) {
-    [10, 100, 1000, 10000].forEach(x => {
-        [10, 100, 1000, 10000].forEach(y => {
-            console.log(x, y, fun(fn, x, "foo", y));
-        });
+function testSpeed({fn, name, repeats}, ...args) {
+    repeats = repeats || [10, 100, 1000, 10000];
+    if (typeof repeats === "number") {
+        repeats = [repeats];
+    }
+    return repeats.map(x => {
+        return [x, fun(fn, x, ...args)];
     });
 }
 
 module.exports = {
     fun,
-    print,
-    testSpeed
+    testLeftpad,
+    testSpeed,
 };
 
 

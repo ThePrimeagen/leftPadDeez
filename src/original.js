@@ -1,3 +1,5 @@
+
+
 function leftPad(str, len, ch) {
     return new Array(len - str.length).join(!ch && ch !== 0 ? " " : ch) + str;
 }
@@ -12,7 +14,6 @@ function leftPad2(str, len, ch) {
     }
     return str;
 }
-
 
 function fun(fn, count, ...args) {
     const start = performance.now();
