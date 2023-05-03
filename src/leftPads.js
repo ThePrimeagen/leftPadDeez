@@ -49,6 +49,28 @@ exports.leftpadTravvy = function(s, l, c) {
     return p + s;
 }
 
+exports.ember2 = function(s, l, c) {
+    let p = "";
+    l = l - s.length;
+    if (l <= 0) return s;
+    c = c || " ";
+    if (l < 1000) {
+        while (true) {
+            p = l & 1 ? p + c : p;
+            l = l >> 1;
+            if (!l) break;
+            c += c;
+        }
+    } else {
+        c = c.repeat(l);
+    }
+    return p + s;
+}
+
+exports.nativePadStart = function(str, len, ch) {
+    return str.padStart(len, ch);
+}
+
 exports.buffer = function(str, len, ch) {
     str = String(str);
     ch = ch || " ";
