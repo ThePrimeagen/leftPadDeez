@@ -16,8 +16,17 @@ function testSpeed(fn, name) {
     });
 }
 
+function print(fn) {
+    [10, 100, 1000, 10000].forEach(x => {
+        [10, 100, 1000, 10000].forEach(y => {
+            console.log(x, y, fun(fn, x, "foo", y));
+        });
+    });
+}
+
 module.exports = {
     fun,
+    print,
     testSpeed
 };
 
