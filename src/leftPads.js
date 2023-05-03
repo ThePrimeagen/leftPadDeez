@@ -34,6 +34,21 @@ exports.leftPadEmber = function(str, len, ch) {
     return ch + str;
 }
 
+exports.leftpadTravvy = function(s, l, c) {
+    let p = "";
+    s += p;
+    l -= s.length;
+    if (l <= 0) return s;
+    c ||= " ";
+    while (true) {
+        p = l & 1 ? p + c : p;
+        l >>= 1;
+        if (!l) break;
+        c += c;
+    }
+    return p + s;
+}
+
 exports.buffer = function(str, len, ch) {
     str = String(str);
     ch = ch || " ";
