@@ -8,9 +8,9 @@ function fun(fn, count, ...args) {
     return performance.now() - start;
 }
 
-function testLeftpad(fn, name) {
-    [10, 100, 1000, 10000].forEach(x => {
-        [10, 100, 1000, 10000].forEach(y => {
+function testLeftpad(fn, name, range = [10, 100, 1000, 10000]) {
+    range.forEach(x => {
+        range.forEach(y => {
             console.log(name, x, y, fun(fn, x, "foo", y));
         });
     });
