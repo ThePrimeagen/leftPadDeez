@@ -17,10 +17,13 @@ function specialCaseFactory(padCache) {
             return flatten(pad.substring(0, len) + str);
         }
 
-        return exports.leftpadTravvy(str, len, ch);
+        return exports.leftPadEmber(str, len, ch);
     }
 }
 
+const zepto = " ".repeat(2);
+const atto = " ".repeat(4);
+const femto = " ".repeat(8);
 const pico = " ".repeat(16);
 const nano = " ".repeat(32);
 const micro = " ".repeat(64);
@@ -30,14 +33,17 @@ const mediumPad = " ".repeat(1024);
 const largePad = " ".repeat(1024 * 5);
 const hugePad = " ".repeat(1024 * 10);
 
-exports.specialCase1 = specialCaseFactory(pico);
-exports.specialCase2 = specialCaseFactory(nano);
-exports.specialCase3 = specialCaseFactory(micro);
-exports.specialCase4 = specialCaseFactory(miniPad);
-exports.specialCase5 = specialCaseFactory(smallPad);
-exports.specialCase6 = specialCaseFactory(mediumPad);
-exports.specialCase7 = specialCaseFactory(largePad);
-exports.specialCase8 = specialCaseFactory(hugePad);
+exports.specialCase1 = specialCaseFactory(zepto);
+exports.specialCase2 = specialCaseFactory(atto);
+exports.specialCase3 = specialCaseFactory(femto);
+exports.specialCase4 = specialCaseFactory(pico);
+exports.specialCase5 = specialCaseFactory(nano);
+exports.specialCase6 = specialCaseFactory(micro);
+exports.specialCase7 = specialCaseFactory(miniPad);
+exports.specialCase8 = specialCaseFactory(smallPad);
+exports.specialCase9 = specialCaseFactory(mediumPad);
+exports.specialCase10 = specialCaseFactory(largePad);
+exports.specialCase11 = specialCaseFactory(hugePad);
 
 exports.leftPad = function(str, len, ch) {
     str = String(str);
