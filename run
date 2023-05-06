@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+
+docker run --rm -d -p 42068:42068 -it suck_it_lass
+id=$(pgrep node)
+
+vmrss () {
+        p=$1
+        if [[ -z $p ]]
+        then
+                p=$(pidof netflix)
+        fi
+        echo "pid choosen: $p from $1 vs $(pidof netflix)"
+        while true
+        do
+                sync
+                cat /proc/$p/status | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox} VmRSS | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox} -o '[0-9]\+' | awk '{print $1/1024 " MB"}'
+                sleep 1
+        done
+}
+
+
+vmrss $id
+
+
+
