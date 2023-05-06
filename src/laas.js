@@ -1,9 +1,9 @@
 const http = require("http");
+const zlib = require('zlib');
 
 const laases = require("./leftpadFinalists");
 
 const genericError = "please provide query params name=name&str=your_string&len=number&char=your_char";
-const bufferPool = new BufferPool();
 
 class BufferPool {
     constructor(maxSize = 10_000) {
@@ -23,6 +23,8 @@ class BufferPool {
     }
 }
 
+const bufferPool = new BufferPool();
+
 const server = http.createServer((req, res) => {
     const query = req.url.split("?")[1];
     if (!query) {
@@ -32,7 +34,8 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    const parts = query.split("&").reduce<((acc, curr) => {
+    const queries = query.split("&");
+    const parts = queries.reduce((acc, curr) => {
         const [key, value] = curr.split("=");
         acc[key] = value;
         return acc;
@@ -42,17 +45,50 @@ const server = http.createServer((req, res) => {
     if (!laases[name] || !str || !len) {
         res.
             writeHead(400, { "Content-Type": "text/html" }).
-            end(`<h1>you suck.  ${genericError}</h1>`);
+            end(`<h1>name, str, len missing.  ${genericError}</h1>`);
         return;
     }
 
+    const acceptEncoding = req.headers['accept-encoding']
+    const gzip = acceptEncoding && acceptEncoding.includes('gzip');
+
+    let out = undefined;
+    let outerBuffer = undefined;
+
     if (name === "buffer") {
-        const buffer = bufferPool.get();
-        res.end(laases[name](str, len, char, buffer), function() {
-            bufferPool.put(buffer);
+        outerBuffer = bufferPool.get();
+        out = laases[name](str, len, char, outerBuffer);
+    } else {
+        out = laases[name](str, len, char);
+    }
+
+    if (gzip) {
+        zlib.gzip(out.buffer || out, (err, buffer) => {
+            if (err) {
+                res.writeHead(500);
+                res.end();
+                return;
+            }
+
+            res.writeHead(200, {
+                'Content-Encoding': 'gzip',
+                'Content-Type': 'text/plain'
+            });
+            res.end(buffer, function() {
+                if (outerBuffer) {
+                    bufferPool.put(outerBuffer);
+                }
+            });
         });
     } else {
-        res.end(laases[name](str, len, char))
+        res.writeHead(200, {
+            'Content-Type': 'text/plain'
+        });
+        res.end(out, function() {
+            if (outerBuffer) {
+                bufferPool.put(outerBuffer);
+            }
+        });
     }
 });
 

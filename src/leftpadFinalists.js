@@ -6,7 +6,7 @@ exports.specialCase = function specialCase(str, len, ch) {
     if (ch === " " || !ch) {
         ch = ch || " ";
         if (len < hugePad.length) {
-            return flatten(hugePad.substring(0, len) + str);
+            return hugePad.substring(0, len) + str;
         }
         let pad = hugePad.substring(0);
         while (pad.length < len) pad += pad;
@@ -55,10 +55,8 @@ exports.leftpadTravvy = function(s, l, c) {
 
 /** assumes buffer is a Uint8Array **/
 exports.buffer = function(str, l, c, buffer) {
-    let p = "";
-    s += p;
-    l -= s.length;
-    if (l <= 0) return s;
+    l -= str.length;
+    if (l <= 0) return str;
     c ||= " ".charCodeAt(0);
 
     if (typeof c === "string") {
