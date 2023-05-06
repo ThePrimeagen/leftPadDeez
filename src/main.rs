@@ -68,11 +68,17 @@ async fn main() {
         let success = success.clone();
         let fails = fails.clone();
 
+        let permit = semaphore.acquire_owned().await;
+
         handles.push(tokio::spawn(async move {
-            let permit = semaphore.acquire_owned().await;
             let start = std::time::Instant::now();
 
-            _ = match client.get(url.clone()).send().await {
+            let request = client
+                .get(url.clone())
+                .header("Accept-Encoding", "gzip")
+                .send();
+
+            _ = match request.await {
                 Ok(_) => success.fetch_add(1, std::sync::atomic::Ordering::Relaxed),
                 Err(_) => fails.fetch_add(1, std::sync::atomic::Ordering::Relaxed),
             };
