@@ -1,13 +1,10 @@
 use std::{
-    cell::{Cell, UnsafeCell},
     fs,
-    iter::Successors,
     sync::{atomic::AtomicUsize, Arc},
 };
 
 use clap::Parser;
 use reqwest::Url;
-use tokio::sync::Semaphore;
 
 #[derive(Debug, Parser)]
 struct Config {
@@ -92,27 +89,18 @@ async fn main() {
         .collect::<Vec<usize>>();
 
     let timings = timings
-            .iter()
-            .map(|x| x.to_string())
-            .collect::<Vec<String>>().join("\n");
+        .iter()
+        .map(|x| x.to_string())
+        .collect::<Vec<String>>()
+        .join("\n");
 
-    _ = fs::write(
-        &format!("{}.timings.csv", file),
-        timings,
-    );
+    _ = fs::write(&format!("{}.timings.csv", file), timings);
 
     let success: usize = success.load(std::sync::atomic::Ordering::Relaxed);
 
-    _ = fs::write(
-        &format!("{}.success.csv", file),
-        success.to_string(),
-    );
+    _ = fs::write(&format!("{}.success.csv", file), success.to_string());
 
     let fails: usize = fails.load(std::sync::atomic::Ordering::Relaxed);
 
-    _ = fs::write(
-        &format!("{}.fails.csv", file),
-        fails.to_string(),
-    );
-
+    _ = fs::write(&format!("{}.fails.csv", file), fails.to_string());
 }
