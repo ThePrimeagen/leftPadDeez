@@ -54,7 +54,7 @@ exports.leftpadTravvy = function(s, l, c) {
 }
 
 /** assumes buffer is a Uint8Array **/
-exports.leftPadBuffer = function(str, len, ch, buffer) {
+exports.buffer = function(str, l, c, buffer) {
     let p = "";
     s += p;
     l -= s.length;
@@ -68,6 +68,7 @@ exports.leftPadBuffer = function(str, len, ch, buffer) {
     for (let i = 0; i < l; i++) {
         buffer[i] = c;
     }
+    buffer.write(str, l);
 
-    return p + s;
+    return buffer.subarray(0, l + str.length);
 }
