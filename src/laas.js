@@ -24,8 +24,38 @@ class BufferPool {
 }
 
 const bufferPool = new BufferPool();
+let sinceLastRequest = Date.now();
+
+const setFlagsFromString = require('v8').setFlagsFromString;
+const runInNewContext = require("vm").runInNewContext;
+
+setFlagsFromString('--expose_gc');
+const gc = runInNewContext('gc'); // nocommit
+
+function runGC() {
+    if (Date.now() - sinceLastRequest > 1000) {
+        gc();
+    }
+    setTimeout(runGC, 1000);
+}
+runGC();
+
+function grabValue(str, key, defaultValue) {
+    const idx = str.indexOf(key);
+    if (idx === -1) {
+        return defaultValue;
+    }
+
+    let endIdx = str.indexOf("&", idx);
+    if (endIdx === -1) {
+        endIdx = str.length;
+    }
+
+    return str.substring(idx + key.length + 1, endIdx);
+}
 
 const server = http.createServer((req, res) => {
+    sinceLastRequest = Date.now();
     const query = req.url.split("?")[1];
     if (!query) {
         res.
@@ -34,14 +64,11 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    const queries = query.split("&");
-    const parts = queries.reduce((acc, curr) => {
-        const [key, value] = curr.split("=");
-        acc[key] = value;
-        return acc;
-    }, {});
+    const name = grabValue(query, "name", "");
+    const str = grabValue(query, "str", "");
+    const len = +grabValue(query, "len", "");
+    const char = grabValue(query, "char", "");
 
-    const { name, str, len, char } = parts;
     if (!laases[name] || !str || !len) {
         res.
             writeHead(400, { "Content-Type": "text/html" }).

@@ -38,6 +38,10 @@ exports.leftPadEmber = function(str, len, ch) {
     return ch + str;
 }
 
+exports.native = function(str, len, ch) {
+    return str.padStart(len, ch);
+}
+
 exports.leftpadTravvy = function(s, l, c) {
     let p = "";
     s += p;
