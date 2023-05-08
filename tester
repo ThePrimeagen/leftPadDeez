@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# create array of leftPad, leftPadTravvy, leftPadEmber, secialCase, buffer, native
+# for each leftPad, leftPadTravvy, leftPadEmber, secialCase, buffer, native
+
+for concurrency in 50 100 250 500 1000 2000
+do
+for length in 50 500 1000 2500 5000 10000
+do
+for item in leftPad leftPadTravvy leftPadEmber secialCase buffer native
+do
+    echo "Running $item with $length and concurrency $concurrency"
+    ./target/release/leftPadDeez --host 198.58.97.4 --parallel $concurrency --count 25000 --file data/$(echo $item)_$(echo $length)_$(echo $concurrency) --name $item --len $length --collect
+done
+done
+done

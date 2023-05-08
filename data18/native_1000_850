@@ -1,0 +1,126 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      850
+Time taken for tests:   36.089 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      3700000 bytes
+HTML transferred:       575000 bytes
+Requests per second:    692.73 [#/sec] (mean)
+Time per request:       1227.029 [ms] (mean)
+Time per request:       1.444 [ms] (mean, across all concurrent requests)
+Transfer rate:          100.12 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       57  502 1069.5    139   15531
+Processing:    60  313 582.0    143   22690
+Waiting:       49  260 558.3    119   22690
+Total:        130  815 1230.3    326   23871
+
+Percentage of the requests served within a certain time (ms)
+  50%    326
+  66%    679
+  75%    964
+  80%   1254
+  90%   1605
+  95%   3268
+  98%   4106
+  99%   7350
+ 100%  23871 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      850
+Time taken for tests:   28.789 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      3700000 bytes
+HTML transferred:       575000 bytes
+Requests per second:    868.40 [#/sec] (mean)
+Time per request:       978.812 [ms] (mean)
+Time per request:       1.152 [ms] (mean, across all concurrent requests)
+Transfer rate:          125.51 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       54  497 1171.2    146   15566
+Processing:    53  288 444.4    150   17612
+Waiting:       49  242 398.4    121    8241
+Total:        121  786 1257.0    316   18786
+
+Percentage of the requests served within a certain time (ms)
+  50%    316
+  66%    661
+  75%    812
+  80%   1240
+  90%   1348
+  95%   3079
+  98%   3889
+  99%   7362
+ 100%  18786 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      850
+Time taken for tests:   28.201 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      3700000 bytes
+HTML transferred:       575000 bytes
+Requests per second:    886.50 [#/sec] (mean)
+Time per request:       958.829 [ms] (mean)
+Time per request:       1.128 [ms] (mean, across all concurrent requests)
+Transfer rate:          128.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       56  490 1129.1    151   15568
+Processing:    59  298 447.7    154   13476
+Waiting:       46  247 420.6    124   13474
+Total:        123  788 1227.5    323   16532
+
+Percentage of the requests served within a certain time (ms)
+  50%    323
+  66%    690
+  75%    837
+  80%   1240
+  90%   1353
+  95%   2594
+  98%   4006
+  99%   7381
+ 100%  16532 (longest request)

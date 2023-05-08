@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const file = process.argv[2];
+
+const contents = fs.readFileSync(file, "utf8").toString().split("\n").filter(line => line).map(line => line.split(",").map(x => +x)).map(x => {return { start: x[0], duration: x[1]}});
+//const start = contents[0].start;
+//const end = contents.at(-1).start;
+
+const timings = contents.map(x => x.duration).sort((a, b) => a - b);
+
+function quantile(timings, percent) {
+    const index = Math.floor(timings.length * percent);
+    return timings[index];
+}
+
+console.log(`1: ${quantile(timings, 0.01)}`);
+console.log(`5: ${quantile(timings, 0.05)}`);
+console.log(`10: ${quantile(timings, 0.1)}`);
+console.log(`25: ${quantile(timings, 0.25)}`);
+console.log(`50: ${quantile(timings, 0.5)}`);
+console.log(`75: ${quantile(timings, 0.75)}`);
+console.log(`90: ${quantile(timings, 0.9)}`);
+console.log(`95: ${quantile(timings, 0.95)}`);
+console.log(`99: ${quantile(timings, 0.99)}`);
+console.log(`max: ${timings.at(-1)}`);
+
+

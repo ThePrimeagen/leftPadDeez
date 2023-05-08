@@ -1,0 +1,90 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 24998 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=1000
+Document Length:        56 bytes
+
+Concurrency Level:      50
+Time taken for tests:   69.286 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4525000 bytes
+HTML transferred:       1400000 bytes
+Requests per second:    360.83 [#/sec] (mean)
+Time per request:       138.571 [ms] (mean)
+Time per request:       2.771 [ms] (mean, across all concurrent requests)
+Transfer rate:          63.78 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       50   70  71.8     63    1156
+Processing:    51   68  28.9     65    2680
+Waiting:       47   63  26.1     61    2676
+Total:        106  138  79.2    128    3769
+
+Percentage of the requests served within a certain time (ms)
+  50%    128
+  66%    131
+  75%    134
+  80%    136
+  90%    148
+  95%    181
+  98%    212
+  99%    233
+ 100%   3769 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=1000
+Document Length:        56 bytes
+
+Concurrency Level:      50
+Time taken for tests:   69.761 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4525000 bytes
+HTML transferred:       1400000 bytes
+Requests per second:    358.37 [#/sec] (mean)
+Time per request:       139.522 [ms] (mean)
+Time per request:       2.790 [ms] (mean, across all concurrent requests)
+Transfer rate:          63.34 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       50   71  78.1     62    1154
+Processing:    49   68  28.4     64    1280
+Waiting:       45   63  25.3     60    1280
+Total:        106  139  83.5    127    1511
+
+Percentage of the requests served within a certain time (ms)
+  50%    127
+  66%    130
+  75%    133
+  80%    135
+  90%    148
+  95%    184
+  98%    220
+  99%    269
+ 100%   1511 (longest request)

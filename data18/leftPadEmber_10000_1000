@@ -1,0 +1,54 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadEmber&str=foo&len=10000
+Document Length:        50 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   35.884 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4375000 bytes
+HTML transferred:       1250000 bytes
+Requests per second:    696.68 [#/sec] (mean)
+Time per request:       1435.369 [ms] (mean)
+Time per request:       1.435 [ms] (mean, across all concurrent requests)
+Transfer rate:          119.06 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       52  594 1314.5    141   15649
+Processing:    62  315 625.9    145   23258
+Waiting:       49  267 593.9    118   23258
+Total:        124  909 1471.8    323   23384
+
+Percentage of the requests served within a certain time (ms)
+  50%    323
+  66%    693
+  75%   1181
+  80%   1276
+  90%   1747
+  95%   3341
+  98%   7332
+  99%   7525
+ 100%  23384 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 24997 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 24998 requests completed

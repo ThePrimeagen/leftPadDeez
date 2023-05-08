@@ -1,0 +1,90 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPad&str=foo&len=5000
+Document Length:        45 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   29.226 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4250000 bytes
+HTML transferred:       1125000 bytes
+Requests per second:    855.41 [#/sec] (mean)
+Time per request:       1169.025 [ms] (mean)
+Time per request:       1.169 [ms] (mean, across all concurrent requests)
+Transfer rate:          142.01 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53  608 1485.0    136   15726
+Processing:    63  314 595.8    140   18261
+Waiting:       51  270 572.6    117   18261
+Total:        125  922 1621.3    310   18392
+
+Percentage of the requests served within a certain time (ms)
+  50%    310
+  66%    670
+  75%    914
+  80%   1257
+  90%   1744
+  95%   3460
+  98%   7367
+  99%   7519
+ 100%  18392 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 24999 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPad&str=foo&len=5000
+Document Length:        45 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   28.904 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4250000 bytes
+HTML transferred:       1125000 bytes
+Requests per second:    864.94 [#/sec] (mean)
+Time per request:       1156.152 [ms] (mean)
+Time per request:       1.156 [ms] (mean, across all concurrent requests)
+Transfer rate:          143.59 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       55  558 1210.5    150   15629
+Processing:    65  334 581.3    156   16534
+Waiting:       47  283 547.5    125   16529
+Total:        126  892 1368.3    334   19720
+
+Percentage of the requests served within a certain time (ms)
+  50%    334
+  66%    741
+  75%   1189
+  80%   1280
+  90%   1712
+  95%   3312
+  98%   5039
+  99%   7774
+ 100%  19720 (longest request)

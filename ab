@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+for repeat in 1 2 3
+do
+for concurrency in 250 500 750 1000
+do
+for length in 50 500 1000
+do
+for item in leftPad leftPadTravvy leftPadEmber secialCase buffer native
+do
+    echo "Running $item with $length and concurrency $concurrency"
+    ab -s 45 -H "Accept-Encoding: gzip" -n 25000 -c $concurrency "http://198.58.97.4:42068/?name=$item&str=foo&len=$length" >> ./data/`echo $item`_`echo $length`_`echo $concurrency`
+
+    # allows for manual execution of gc
+    echo "done -- sleeping"
+    sleep 3
+done
+done
+done
+done
+

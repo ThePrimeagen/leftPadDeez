@@ -1,0 +1,130 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   108.791 seconds
+Complete requests:      25000
+Failed requests:        3
+   (Connect: 0, Receive: 0, Length: 3, Exceptions: 0)
+Non-2xx responses:      4
+Total transferred:      3699908 bytes
+HTML transferred:       574954 bytes
+Requests per second:    229.80 [#/sec] (mean)
+Time per request:       8703.277 [ms] (mean)
+Time per request:       4.352 [ms] (mean, across all concurrent requests)
+Transfer rate:          33.21 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  795 1877.0    149   15602
+Processing:    56  426 1233.5    150   91469
+Waiting:       48  373 1218.7    121   91607
+Total:        130 1221 2267.1    412   91469
+
+Percentage of the requests served within a certain time (ms)
+  50%    412
+  66%    892
+  75%   1292
+  80%   1341
+  90%   3107
+  95%   3890
+  98%   7739
+  99%  15477
+ 100%  91469 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   89.540 seconds
+Complete requests:      25000
+Failed requests:        96
+   (Connect: 0, Receive: 0, Length: 96, Exceptions: 0)
+Non-2xx responses:      127
+Total transferred:      3706181 bytes
+HTML transferred:       574954 bytes
+Requests per second:    279.20 [#/sec] (mean)
+Time per request:       7163.205 [ms] (mean)
+Time per request:       3.582 [ms] (mean, across all concurrent requests)
+Transfer rate:          40.42 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  754 1823.8    156   15641
+Processing:    62  414 1126.0    158   66101
+Waiting:       45  356 1102.6    124   66699
+Total:        132 1168 2151.0    353   66101
+
+Percentage of the requests served within a certain time (ms)
+  50%    353
+  66%    840
+  75%   1285
+  80%   1329
+  90%   2326
+  95%   3933
+  98%   7778
+  99%  10911
+ 100%  66101 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=native&str=foo&len=1000
+Document Length:        23 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   44.484 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      3700000 bytes
+HTML transferred:       575000 bytes
+Requests per second:    562.00 [#/sec] (mean)
+Time per request:       3558.748 [ms] (mean)
+Time per request:       1.779 [ms] (mean, across all concurrent requests)
+Transfer rate:          81.23 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53  831 1799.5    159   16426
+Processing:    61  441 954.2    162   27023
+Waiting:       45  383 931.3    127   27023
+Total:        136 1272 2034.8    672   28172
+
+Percentage of the requests served within a certain time (ms)
+  50%    672
+  66%   1209
+  75%   1321
+  80%   1372
+  90%   3279
+  95%   4087
+  98%   7547
+  99%   8767
+ 100%  28172 (longest request)

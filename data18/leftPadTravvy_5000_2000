@@ -1,0 +1,92 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=5000
+Document Length:        113 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   40.636 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    615.22 [#/sec] (mean)
+Time per request:       3250.869 [ms] (mean)
+Time per request:       1.625 [ms] (mean, across all concurrent requests)
+Transfer rate:          133.38 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       55  903 1976.1    156   16554
+Processing:    62  478 1178.4    159   28691
+Waiting:       47  408 1147.2    124   28691
+Total:        132 1381 2343.9    681   32945
+
+Percentage of the requests served within a certain time (ms)
+  50%    681
+  66%   1256
+  75%   1334
+  80%   1573
+  90%   3340
+  95%   4876
+  98%   7906
+  99%  15642
+ 100%  32945 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 21855 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=5000
+Document Length:        113 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   42.933 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    582.30 [#/sec] (mean)
+Time per request:       3434.639 [ms] (mean)
+Time per request:       1.717 [ms] (mean, across all concurrent requests)
+Transfer rate:          126.24 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       57  756 1731.9    154   15608
+Processing:    62  432 988.0    157   42659
+Waiting:       44  376 971.2    122   42659
+Total:        135 1188 2007.5    640   42799
+
+Percentage of the requests served within a certain time (ms)
+  50%    640
+  66%    927
+  75%   1303
+  80%   1342
+  90%   2368
+  95%   3820
+  98%   7506
+  99%  10151
+ 100%  42799 (longest request)

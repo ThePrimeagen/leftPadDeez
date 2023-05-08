@@ -79,16 +79,23 @@ const server = http.createServer((req, res) => {
     const acceptEncoding = req.headers['accept-encoding']
     const gzip = acceptEncoding && acceptEncoding.includes('gzip');
 
-    let out = undefined;
-    let outerBuffer = undefined;
+    const outBuffer = [];
+    const buffersUsed = [];
+    for (let i = 0; i < 1000; ++i) {
+        let out = undefined;
+        if (name === "buffer") {
+            const outerBuffer = bufferPool.get();
+            out = laases[name](str, len, char, outerBuffer);
+            outBuffer.push(out.subarray(0, 5).toString());
 
-    if (name === "buffer") {
-        outerBuffer = bufferPool.get();
-        out = laases[name](str, len, char, outerBuffer);
-    } else {
-        out = laases[name](str, len, char);
+            buffersUsed.push(outerBuffer);
+        } else {
+            out = laases[name](str, len, char);
+            outBuffer.push(out.substring(0, 5));
+        }
     }
 
+    const out = outBuffer.join(",");
     if (gzip) {
         zlib.gzip(out.buffer || out, (err, buffer) => {
             if (err) {
@@ -102,7 +109,7 @@ const server = http.createServer((req, res) => {
                 'Content-Type': 'text/plain'
             });
             res.end(buffer, function() {
-                if (outerBuffer) {
+                for (const outerBuffer of buffersUsed) {
                     bufferPool.put(outerBuffer);
                 }
             });
@@ -112,7 +119,7 @@ const server = http.createServer((req, res) => {
             'Content-Type': 'text/plain'
         });
         res.end(out, function() {
-            if (outerBuffer) {
+            for (const outerBuffer of buffersUsed) {
                 bufferPool.put(outerBuffer);
             }
         });
@@ -120,6 +127,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(42068, function() {
-    console.log("listen");
+    console.log("listen enxt");
 }); // disappoint
 
