@@ -1,28 +1,93 @@
 #!/usr/bin/env node
 
+const path = require("path");
 const fs = require("fs");
-const file = process.argv[2];
+const folder = process.argv[2];
 
-const contents = fs.readFileSync(file, "utf8").toString().split("\n").filter(line => line).map(line => line.split(",").map(x => +x)).map(x => {return { start: x[0], duration: x[1]}});
-//const start = contents[0].start;
-//const end = contents.at(-1).start;
+const stats = fs.statSync(folder);
 
-const timings = contents.map(x => x.duration).sort((a, b) => a - b);
-
-function quantile(timings, percent) {
-    const index = Math.floor(timings.length * percent);
-    return timings[index];
+if (stats.isFile()) {
+    throw new Error("must be directory");
+    console.log("File");
 }
 
-console.log(`1: ${quantile(timings, 0.01)}`);
-console.log(`5: ${quantile(timings, 0.05)}`);
-console.log(`10: ${quantile(timings, 0.1)}`);
-console.log(`25: ${quantile(timings, 0.25)}`);
-console.log(`50: ${quantile(timings, 0.5)}`);
-console.log(`75: ${quantile(timings, 0.75)}`);
-console.log(`90: ${quantile(timings, 0.9)}`);
-console.log(`95: ${quantile(timings, 0.95)}`);
-console.log(`99: ${quantile(timings, 0.99)}`);
-console.log(`max: ${timings.at(-1)}`);
+const files = fs.readdirSync(folder);
+const lengths = [50, 250, 500, 1000, 2500, 5000, 10000];
+const names = ["native", "buffer", "secialCase", "leftPadEmber", "leftPadTravvy", "leftPad"];
+const concurrencies = [250, 500, 750, 1000, 2000];
+const dataPoints = [];
+const data = [];
 
+for (let i = 0; i < concurrencies.length; ++i) {
+    for (let j = 0; j < names.length; ++j) {
+        dataPoints.push(`${names[j]}_${concurrencies[i]}`);
+        data.push([]);
+    }
+}
+
+for (const file of files) {
+    const [
+        name,
+        length,
+        concurrency,
+    ] = file.split("_");
+
+    if (!name || !concurrency || !length) {
+        continue;
+    }
+
+    const lengthIdx = lengths.indexOf(+length);
+    const nameIdx = dataPoints.indexOf(`${name}_${concurrency}`);
+
+    if (lengthIdx === -1 || nameIdx === -1) {
+        continue;
+    }
+
+    const filePath = path.join(folder, file);
+    const contents = fs.readFileSync(filePath, "utf8").toString().split("\n");
+    const totals = contents.filter(line => line.includes("Total:"));
+
+    let sum = 0;
+    for (const total of totals) {
+        const [, med, _] = total.split(" ").map(x => +x).filter(x => x);
+        sum += med;
+    }
+
+    data[nameIdx][lengthIdx] = sum / totals.length || 0;
+}
+
+function getConcurrencyRow(concurrency) {
+    const row = [];
+    for (const name of names) {
+        row.push(`${name}_${concurrency}`);
+    }
+    return row;
+}
+
+function printOut(concurrency) {
+    const test = getConcurrencyRow(concurrency);
+    const out = [
+        ["", ...test].join(","),
+    ]
+    for (const length of lengths) {
+        const row = [length];
+        for (const name of test) {
+            const idx = dataPoints.indexOf(name);
+            row.push(Math.round(data[idx][lengths.indexOf(length)]));
+        }
+        out.push(row.join(","));
+    }
+
+    for (const o of out) {
+        if (o.includes("NaN")) {
+            continue;
+        }
+        console.log(o);
+    }
+}
+
+for (const concurrency of concurrencies) {
+    printOut(concurrency);
+    console.log();
+}
 

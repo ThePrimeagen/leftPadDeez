@@ -2,11 +2,11 @@
 
 for repeat in 1 2 3
 do
-for concurrency in 250 500 750 1000
+for concurrency in 1000 750 500 250
 do
-for length in 50 500 1000
+for length in 1000 500 50
 do
-for item in leftPad leftPadTravvy leftPadEmber secialCase buffer native
+for item in native buffer secialCase leftPadEmber leftPadTravvy leftPad
 do
     echo "Running $item with $length and concurrency $concurrency"
     ab -s 45 -H "Accept-Encoding: gzip" -n 25000 -c $concurrency "http://198.58.97.4:42068/?name=$item&str=foo&len=$length" >> ./data/`echo $item`_`echo $length`_`echo $concurrency`
