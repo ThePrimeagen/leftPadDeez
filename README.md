@@ -40,23 +40,35 @@ https://www.youtube.com/watch?v=NmHUjxKpD90&lc=UgzJ2XxM49kN4S9f5FV4AaABAg
 
 "sure"
 
-stack overflow ackshually gave the worst result
-Selection_305
+Also, big shoutout to stack overflow for creating the worst performing version
+by over 10x
+https://stackoverflow.com/questions/13859538/simplest-inline-method-to-left-pad-a-string/13861999
 
 ---
 
 ### The Problem
 so is travvy's implementation really 308x faster?  Why is my version i wrote
 later 6.15x faster than travvy's?  Can you trust these benchmarks?  Is there a
-better way to measure?
+better way to measure?  Is stackoverflow really a place to make you feel
+morally defeated or superior depending on whether you ask or answer a question?
+
+https://stackoverflow.com/questions/2766785/fixing-lock-wait-timeout-exceeded-try-restarting-transaction-for-a-stuck-my/4797328#4797328
+bruh
+also accepted? little bobby tables would be so impressed
 
 These types of benchmarks are referred to as micro benchmarks.
 1. they are often ran on "someone's computer."  Its not a great testing
    environment
+
+   pgrep node
+   pgrep rust-analyzer
+   pgrep zls
+
 2. the duration of the tests often hide implementation details that can be bad,
    ie, GC.  the usage can often hide implementation details.  for strings,
    concating them creates roped strings which are quite optimized, but when you
-   use them, you can pay a higher tax.  thus my 2.5 worse solution, becomes quite comparable (show image)
+   use them, you can pay a higher tax.  thus my 2.5 worse solution, becomes
+   quite comparable (show image)
 
 leftPad 100 100 0.21621200442314148
 leftPad 100 1000 0.7008289992809296
@@ -88,16 +100,21 @@ leftpadTravvy 10000 10000 1.3511539995670319
 stringSpecialCase 10000 10000 0.21970000863075256
 
 ### The Experiment
-So how could you really test the speed of all of these leftpad
+So how did i determine what leftpad was ackshually the fastest?
 
 1. create a server
   - go a head, complain about it in the comments
 2. setup apache bench script
-3. send 27 million requests that took 36 hours to complete.
+3. ensure a proper sleep between each and manual gc execution on the server if
+   no requests (previous tests wont have as much initial effect)
+4. send 27 million requests that took 36 hours to complete.
   - i would personally like to thank linode for not rate limiting me and giving me an instance to test on :)  Thanks Andrew
-4. create a parser of apache bench results
-5. paste everything in google spreadsheets
-6. charts
+5. create a parser of apache bench results and calculate the average of the medians
+6. paste everything in google spreadsheets
+7. charts
 
 ### The Conclusion
+First, what do these charts mean? (go over axes)
+Second, which _was the fastest_?
+Third, What is our conclusion?
 

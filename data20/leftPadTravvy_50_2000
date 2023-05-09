@@ -1,0 +1,130 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=50
+Document Length:        113 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   48.166 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    519.04 [#/sec] (mean)
+Time per request:       3853.259 [ms] (mean)
+Time per request:       1.927 [ms] (mean, across all concurrent requests)
+Transfer rate:          112.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       56  844 1963.1    157   15629
+Processing:    54  429 1002.3    159   28608
+Waiting:       47  374 980.9    123   28608
+Total:        135 1273 2218.6    651   44173
+
+Percentage of the requests served within a certain time (ms)
+  50%    651
+  66%   1185
+  75%   1315
+  80%   1354
+  90%   3258
+  95%   3978
+  98%   7905
+  99%  15709
+ 100%  44173 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=50
+Document Length:        113 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   40.655 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    614.94 [#/sec] (mean)
+Time per request:       3252.370 [ms] (mean)
+Time per request:       1.626 [ms] (mean, across all concurrent requests)
+Transfer rate:          133.32 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       58  849 1810.3    153   15666
+Processing:    53  475 1175.3    156   37961
+Waiting:       45  412 1143.3    122   37961
+Total:        139 1324 2176.4    674   38099
+
+Percentage of the requests served within a certain time (ms)
+  50%    674
+  66%   1263
+  75%   1334
+  80%   1626
+  90%   3301
+  95%   4009
+  98%   7835
+  99%  12566
+ 100%  38099 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=50
+Document Length:        113 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   107.362 seconds
+Complete requests:      25000
+Failed requests:        83
+   (Connect: 0, Receive: 0, Length: 83, Exceptions: 0)
+Non-2xx responses:      25128
+Total transferred:      5556357 bytes
+HTML transferred:       2824887 bytes
+Requests per second:    232.86 [#/sec] (mean)
+Time per request:       8588.935 [ms] (mean)
+Time per request:       4.294 [ms] (mean, across all concurrent requests)
+Transfer rate:          50.54 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  966 2231.7    152   16529
+Processing:    65  483 1288.6    154   83062
+Waiting:       46  423 1236.6    121   83188
+Total:        134 1449 2702.8    647   83062
+
+Percentage of the requests served within a certain time (ms)
+  50%    647
+  66%   1240
+  75%   1329
+  80%   1629
+  90%   3331
+  95%   5119
+  98%  11020
+  99%  15668
+ 100%  83062 (longest request)

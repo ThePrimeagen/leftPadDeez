@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=secialCase&str=foo&len=500
+Document Length:        113 bytes
+
+Concurrency Level:      650
+Time taken for tests:   34.611 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    722.32 [#/sec] (mean)
+Time per request:       899.877 [ms] (mean)
+Time per request:       1.384 [ms] (mean, across all concurrent requests)
+Transfer rate:          156.60 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       60  387 908.2    135   16434
+Processing:    63  248 490.6    135   27496
+Waiting:       52  203 463.0    115   27496
+Total:        129  635 1041.7    284   28660
+
+Percentage of the requests served within a certain time (ms)
+  50%    284
+  66%    355
+  75%    672
+  80%    777
+  90%   1284
+  95%   1729
+  98%   3322
+  99%   4731
+ 100%  28660 (longest request)

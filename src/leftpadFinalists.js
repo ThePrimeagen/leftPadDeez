@@ -20,6 +20,13 @@ exports.so = function stackOverflow(value, length) {
     return (value.toString().length < length) ? stackOverflow("0" + value, length) : value;
 }
 
+exports.sotr = function stackOverflowTR(value, length) {
+    if (length <= value.length) {
+        return value;
+    }
+    return "0" + stackOverflowTR(value, length - 1);
+}
+
 exports.leftPad = function(str, len, ch) {
     str = String(str);
     var i = -1;

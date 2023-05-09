@@ -13,7 +13,9 @@ if (stats.isFile()) {
 
 const files = fs.readdirSync(folder);
 const lengths = [50, 250, 500, 1000, 2500, 5000, 10000];
-const names = ["native", "buffer", "secialCase", "leftPadEmber", "leftPadTravvy", "leftPad"];
+const names = process.argv[3] !== undefined ?
+    process.argv[3].split(",") :
+    ["native", "buffer", "secialCase", "leftPadEmber", "leftPadTravvy", "leftPad"];
 const concurrencies = [250, 500, 750, 1000, 2000];
 const dataPoints = [];
 const data = [];

@@ -1,0 +1,128 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=500
+Document Length:        56 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   36.091 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4525000 bytes
+HTML transferred:       1400000 bytes
+Requests per second:    692.69 [#/sec] (mean)
+Time per request:       1443.653 [ms] (mean)
+Time per request:       1.444 [ms] (mean, across all concurrent requests)
+Transfer rate:          122.44 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       54  583 1287.2    139   15575
+Processing:    59  336 732.9    142   26866
+Waiting:       50  290 686.2    120   26866
+Total:        121  919 1489.8    333   28008
+
+Percentage of the requests served within a certain time (ms)
+  50%    333
+  66%    707
+  75%   1206
+  80%   1267
+  90%   1752
+  95%   3318
+  98%   7377
+  99%   7520
+ 100%  28008 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=500
+Document Length:        60 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   31.609 seconds
+Complete requests:      25000
+Failed requests:        20215
+   (Connect: 0, Receive: 0, Length: 20215, Exceptions: 0)
+Total transferred:      4613532 bytes
+HTML transferred:       1488532 bytes
+Requests per second:    790.90 [#/sec] (mean)
+Time per request:       1264.375 [ms] (mean)
+Time per request:       1.264 [ms] (mean, across all concurrent requests)
+Transfer rate:          142.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       59  595 1324.7    150   16444
+Processing:    66  328 565.4    154   16651
+Waiting:       50  275 529.7    123   16651
+Total:        129  923 1459.6    331   19862
+
+Percentage of the requests served within a certain time (ms)
+  50%    331
+  66%    736
+  75%   1166
+  80%   1286
+  90%   1743
+  95%   3350
+  98%   7398
+  99%   7525
+ 100%  19862 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=500
+Document Length:        56 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   39.672 seconds
+Complete requests:      25000
+Failed requests:        16034
+   (Connect: 0, Receive: 0, Length: 16034, Exceptions: 0)
+Total transferred:      4589174 bytes
+HTML transferred:       1464174 bytes
+Requests per second:    630.17 [#/sec] (mean)
+Time per request:       1586.876 [ms] (mean)
+Time per request:       1.587 [ms] (mean, across all concurrent requests)
+Transfer rate:          112.97 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       55  596 1280.0    148   15578
+Processing:    62  326 635.9    152   21002
+Waiting:       49  272 592.0    122   21002
+Total:        126  922 1451.0    325   21151
+
+Percentage of the requests served within a certain time (ms)
+  50%    325
+  66%    735
+  75%   1232
+  80%   1292
+  90%   1789
+  95%   3335
+  98%   7351
+  99%   7594
+ 100%  21151 (longest request)

@@ -1,0 +1,86 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=10000
+Document Length:        50 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   36.928 seconds
+Complete requests:      25000
+Failed requests:        0
+Total transferred:      4375000 bytes
+HTML transferred:       1250000 bytes
+Requests per second:    677.00 [#/sec] (mean)
+Time per request:       2954.221 [ms] (mean)
+Time per request:       1.477 [ms] (mean, across all concurrent requests)
+Transfer rate:          115.70 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       57  781 1880.5    141   16574
+Processing:    63  381 874.1    146   26606
+Waiting:       46  332 845.0    120   26606
+Total:        159 1162 2132.9    354   30447
+
+Percentage of the requests served within a certain time (ms)
+  50%    354
+  66%    830
+  75%   1270
+  80%   1310
+  90%   2499
+  95%   3839
+  98%   7540
+  99%  11192
+ 100%  30447 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=buffer&str=foo&len=10000
+Document Length:        50 bytes
+
+Concurrency Level:      2000
+Time taken for tests:   86.676 seconds
+Complete requests:      25000
+Failed requests:        49
+   (Connect: 0, Receive: 0, Length: 49, Exceptions: 0)
+Non-2xx responses:      78
+Total transferred:      4378628 bytes
+HTML transferred:       1249900 bytes
+Requests per second:    288.43 [#/sec] (mean)
+Time per request:       6934.107 [ms] (mean)
+Time per request:       3.467 [ms] (mean, across all concurrent requests)
+Transfer rate:          49.33 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  796 1831.0    158   15669
+Processing:    59  444 1071.1    163   61604
+Waiting:       47  378 1050.5    126   62200
+Total:        133 1240 2134.2    660   61604
+
+Percentage of the requests served within a certain time (ms)
+  50%    660
+  66%   1212
+  75%   1328
+  80%   1367
+  90%   2823
+  95%   3830
+  98%   7603
+  99%  14868
+ 100%  61604 (longest request)
