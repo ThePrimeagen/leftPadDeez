@@ -16,6 +16,10 @@ exports.specialCase = function specialCase(str, len, ch) {
     return exports.leftPadEmber(str, len, ch);
 }
 
+exports.so = function stackOverflow(value, length) {
+    return (value.toString().length < length) ? pad("0" + value, length) : value;
+}
+
 exports.leftPad = function(str, len, ch) {
     str = String(str);
     var i = -1;
