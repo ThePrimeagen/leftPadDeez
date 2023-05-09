@@ -1,7 +1,3 @@
-function flatten(s) {
-    return Number(s);
-}
-
 exports.primeOriginalLeftPad = function(str, len, ch) {
     return new Array(len - str.length).join(!ch && ch !== 0 ? " " : ch) + str;
 }
@@ -18,11 +14,22 @@ exports.ember2 = function(s, l, c) {
         if (!l) break;
         c += c;
     }
-    return flatten(p + s);
+    return p + s;
 }
 
 exports.nativePadStart = function(str, len, ch) {
-    return flatten(str.padStart(len, ch));
+    return str.padStart(len, ch);
+}
+
+exports.leftPad = function(str, len, ch) {
+    str = String(str);
+    var i = -1;
+    if (!ch && ch !== 0) ch = " ";
+    len = len - str.length;
+    while (++i < len) {
+        str = ch + str;
+    }
+    return str;
 }
 
 const asciiBuffer = Buffer.alloc(1024 * 500);
@@ -34,7 +41,7 @@ exports.bufferAsciiSpecialCase = function(str, len, ch) {
 
     asciiBuffer.fill(ch.charCodeAt(0), 0, fillLen);
     asciiBuffer.write(str, len - str.length);
-    return flatten(asciiBuffer.toString("utf-8", 0, len));
+    return asciiBuffer.toString("utf-8", 0, len);
 }
 
 exports.eloy = function(str, len, char) {
@@ -141,7 +148,7 @@ exports.bufferAscii = function(str, len, ch) {
 
     const buffer = Buffer.alloc(Math.max(len, str.length), ch);
     buffer.write(str, buffer.byteLength - str.length);
-    return flatten(buffer.toString());
+    return buffer.toString();
 }
 
 exports.buffer = function(str, len, ch) {
@@ -153,7 +160,7 @@ exports.buffer = function(str, len, ch) {
     const buffer = Buffer.alloc(Math.max(len, str.length) + bonusLength).fill(ch);
 
     strBuffer.copy(buffer, buffer.byteLength - strBuffer.byteLength);
-    return flatten(buffer.toString());
+    return buffer.toString();
 }
 
 // assuming its always white space of a certain max length
@@ -170,9 +177,30 @@ exports.bufferSpecialCase = function(str, len) {
     return buffer.toString();
 }
 
+exports.leftpadTravvy = function(s, l, c) {
+    let p = "";
+    s += p;
+    l -= s.length;
+    if (l <= 0) return s;
+    c ||= " ";
+    while (true) {
+        p = l & 1 ? p + c : p;
+        l >>= 1;
+        if (!l) break;
+        c += c;
+    }
+    return p + s;
+}
+
 const whitespaceString = " ".repeat(10000);
-exports.stringSpecialCase = function(str, len) {
+exports.stringSpecialCase = function(str, len, ch) {
+    ch = ch || " ";
     str = String(str);
 
-    return whitespaceString.slice(0, Math.max(len, str.length) - str.length) + str;
+    if (len <= str.length) return str;
+
+    if (ch === " ") {
+        return whitespaceString.slice(0, len - str.length) + str;
+    }
+    return exports.leftpadTravvy(str, len, ch);
 }

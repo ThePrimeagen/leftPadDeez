@@ -17,7 +17,7 @@ exports.specialCase = function specialCase(str, len, ch) {
 }
 
 exports.so = function stackOverflow(value, length) {
-    return (value.toString().length < length) ? pad("0" + value, length) : value;
+    return (value.toString().length < length) ? stackOverflow("0" + value, length) : value;
 }
 
 exports.leftPad = function(str, len, ch) {

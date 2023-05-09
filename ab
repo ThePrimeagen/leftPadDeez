@@ -4,7 +4,7 @@ for repeat in 1 2 3
 do
 for concurrency in 1000 750 500 250
 do
-for length in 1000 500 50
+for length in 150 100 50
 do
 for item in so
 do
