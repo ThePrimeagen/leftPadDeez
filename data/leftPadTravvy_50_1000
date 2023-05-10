@@ -106,3 +106,95 @@ Percentage of the requests served within a certain time (ms)
   98%   7383
   99%   7570
  100%  30675 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=50
+Document Length:        113 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   30.530 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    818.86 [#/sec] (mean)
+Time per request:       1221.208 [ms] (mean)
+Time per request:       1.221 [ms] (mean, across all concurrent requests)
+Transfer rate:          177.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       54  579 1254.5    134   15633
+Processing:    60  324 636.3    136   18244
+Waiting:       48  279 585.6    115   18244
+Total:        121  903 1438.3    323   18363
+
+Percentage of the requests served within a certain time (ms)
+  50%    323
+  66%    700
+  75%   1228
+  80%   1265
+  90%   1734
+  95%   3323
+  98%   5158
+  99%   7661
+ 100%  18363 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+Total of 24999 requests completed
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=leftPadTravvy&str=foo&len=50
+Document Length:        113 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   48.173 seconds
+Complete requests:      25000
+Failed requests:        0
+Non-2xx responses:      25000
+Total transferred:      5550000 bytes
+HTML transferred:       2825000 bytes
+Requests per second:    518.96 [#/sec] (mean)
+Time per request:       1926.913 [ms] (mean)
+Time per request:       1.927 [ms] (mean, across all concurrent requests)
+Transfer rate:          112.51 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       52  579 1253.5    148   15615
+Processing:    61  362 847.2    150   47914
+Waiting:       48  309 809.9    120   47914
+Total:        133  941 1532.0    330   48042
+
+Percentage of the requests served within a certain time (ms)
+  50%    330
+  66%    760
+  75%   1238
+  80%   1292
+  90%   1818
+  95%   3354
+  98%   5098
+  99%   7540
+ 100%  48042 (longest request)

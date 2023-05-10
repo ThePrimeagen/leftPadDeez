@@ -21,9 +21,10 @@ https://twitter.com/ESArnau/status/1653151823274942472
 
 then the competition
   - https://twitter.com/EmberHext/status/1653778878572253186
-  - bad submissions
+  - submissions, and more
         https://twitter.com/eloytoro/status/1653871587605585932
-        "Eloy, you lost, sorry :("
+        https://twitter.com/brplcc/status/1656067270265937920
+
 
 meanwhile, yt comments be making me hate my life
 https://www.youtube.com/watch?v=NmHUjxKpD90&lc=UgylN8xDB2Khj2tAQuh4AaABAg
@@ -104,16 +105,19 @@ So how did i determine what leftpad was ackshually the fastest?
 
 1. create a server
   - go a head, complain about it in the comments
-2. setup apache bench script
-3. ensure a proper sleep between each and manual gc execution on the server if
-   no requests (previous tests wont have as much initial effect)
-4. send 27 million requests that took 36 hours to complete.
+2. setup apache bench script and ensure a proper sleep between each and manual
+   gc execution on the server if no requests (previous tests wont have as much
+   initial effect)
+3. send 27 million requests that took 36 hours to complete.
   - i would personally like to thank linode for not rate limiting me and giving me an instance to test on :)  Thanks Andrew
-5. create a parser of apache bench results and calculate the average of the medians
-6. paste everything in google spreadsheets
-7. charts
+4. create a parser of apache bench results and calculate the average of the medians
+5. paste everything in google spreadsheets
+6. charts
 
 ### The Conclusion
+What is each data point? Each data point represents 75k requests.  The value is
+the average of the median value of 25k requests.
+
 First, what do these charts mean? (go over axes)
 Second, which _was the fastest_?
 Third, What is our conclusion?

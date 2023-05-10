@@ -3,14 +3,9 @@ exports.specialCase = function specialCase(str, len, ch) {
     len = len - str.length;
     if (len <= 0) return str;
 
-    if (ch === " " || !ch) {
-        ch = ch || " ";
-        if (len < hugePad.length) {
-            return hugePad.substring(0, len) + str;
-        }
-        let pad = hugePad.substring(0);
-        while (pad.length < len) pad += pad;
-        return pad.substring(0, len) + str;
+    ch = ch || " ";
+    if (ch === " " || !ch && len < hugePad.length) {
+        return hugePad.substring(0, len) + str;
     }
 
     return exports.leftPadEmber(str, len, ch);
@@ -22,6 +17,17 @@ exports.so = function stackOverflow(value, length) {
 
 exports.primeLive = function(str, len, ch) {
     return new Array(len - str.length).join(!ch && ch !== 0 ? " " : ch) + str;
+}
+
+exports.Boody = function BoodyleftPad(str, len, ch) {
+    let pad = [];
+    len = len - str.length;
+    for (let i = 0; i < len; i++) {
+        pad.push(ch);
+    }
+
+    str = pad.join("") + str;
+    return str;
 }
 
 exports.sotr = function stackOverflowTR(value, length) {
