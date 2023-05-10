@@ -20,6 +20,10 @@ exports.so = function stackOverflow(value, length) {
     return (value.toString().length < length) ? stackOverflow("0" + value, length) : value;
 }
 
+exports.primeLive = function(str, len, ch) {
+    return new Array(len - str.length).join(!ch && ch !== 0 ? " " : ch) + str;
+}
+
 exports.sotr = function stackOverflowTR(value, length) {
     if (length <= value.length) {
         return value;

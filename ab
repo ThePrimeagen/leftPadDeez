@@ -6,7 +6,7 @@ for concurrency in 1000 750 500 250
 do
 for length in 50 500 1000
 do
-for item in so
+for item in sotr primeLive
 do
     echo "Running $item with $length and concurrency $concurrency"
     ab -s 45 -H "Accept-Encoding: gzip" -n 25000 -c $concurrency "http://198.58.97.4:42068/?name=$item&str=foo&len=$length" >> ./data/`echo $item`_`echo $length`_`echo $concurrency`

@@ -118,3 +118,6 @@ First, what do these charts mean? (go over axes)
 Second, which _was the fastest_?
 Third, What is our conclusion?
 
+if my code is slower than so
+"don't look at me, i am ugly"
+"i guess its time to go back to python (or php)"
