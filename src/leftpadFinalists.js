@@ -12,7 +12,7 @@ exports.specialCase = function specialCase(str, len, ch) {
 }
 
 exports.so = function stackOverflow(value, length) {
-    return (value.toString().length < length) ? stackOverflow("0" + value, length) : value;
+    return (value.toString().length < length) ? stackOverflow("0" + value, length - 1) : value;
 }
 
 exports.primeLive = function(str, len, ch) {
