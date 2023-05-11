@@ -6,17 +6,19 @@ const folder = process.argv[2];
 
 const stats = fs.statSync(folder);
 
-if (stats.isFile()) {
+if (!stats.isDirectory()) {
     throw new Error("must be directory");
-    console.log("File");
 }
 
 const files = fs.readdirSync(folder);
-const lengths = [50, 250, 500, 1000, 2500, 5000, 10000];
+
+/** @type {number[]} */
+const lengths = [50, 500, 1000];
+
 const names = process.argv[3] !== undefined ?
     process.argv[3].split(",") :
-    ["native", "buffer", "secialCase", "leftPadEmber", "leftPadTravvy", "leftPad"];
-const concurrencies = [250, 500, 750, 1000, 2000];
+    ["native", "buffer", "specialCase", "leftPadEmber", "leftPadTravvy", "leftPad", "so", "sotr", "primeLive"];
+const concurrencies = [250, 500, 750, 1000];
 const dataPoints = [];
 const data = [];
 
@@ -66,24 +68,25 @@ function getConcurrencyRow(concurrency) {
     return row;
 }
 
+/**
+ * @param {number} concurrency
+ */
 function printOut(concurrency) {
     const test = getConcurrencyRow(concurrency);
     const out = [
-        ["", ...test].join(","),
+        ["length", ...test].join(","),
     ]
     for (const length of lengths) {
         const row = [length];
         for (const name of test) {
             const idx = dataPoints.indexOf(name);
-            row.push(Math.round(data[idx][lengths.indexOf(length)]));
+            const value = Math.round(data[idx][lengths.indexOf(length)]) || 0;
+            row.push(value);
         }
         out.push(row.join(","));
     }
 
     for (const o of out) {
-        if (o.includes("NaN")) {
-            continue;
-        }
         console.log(o);
     }
 }

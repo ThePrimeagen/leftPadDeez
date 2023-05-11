@@ -19,17 +19,6 @@ exports.primeLive = function(str, len, ch) {
     return new Array(len - str.length).join(!ch && ch !== 0 ? " " : ch) + str;
 }
 
-exports.Boody = function BoodyleftPad(str, len, ch) {
-    let pad = [];
-    len = len - str.length;
-    for (let i = 0; i < len; i++) {
-        pad.push(ch);
-    }
-
-    str = pad.join("") + str;
-    return str;
-}
-
 exports.sotr = function stackOverflowTR(value, length) {
     if (length <= value.length) {
         return value;
@@ -50,7 +39,7 @@ exports.leftPad = function(str, len, ch) {
 
 exports.leftPadEmber = function(str, len, ch) {
     str = String(str);
-    ch = ch || " "; // i use double quotes because me > you ember..
+    ch = ch || " ";
     len = len - str.length;
 
     if (len <= 0) return str;

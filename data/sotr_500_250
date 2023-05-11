@@ -10,33 +10,159 @@ Server Hostname:        198.58.97.4
 Server Port:            42068
 
 Document Path:          /?name=sotr&str=foo&len=500
-Document Length:        48 bytes
+Document Length:        272 bytes
 
 Concurrency Level:      250
-Time taken for tests:   232.446 seconds
-Complete requests:      25000
+Time taken for tests:   27.202 seconds
+Complete requests:      12500
 Failed requests:        0
-Total transferred:      4325000 bytes
-HTML transferred:       1200000 bytes
-Requests per second:    107.55 [#/sec] (mean)
-Time per request:       2324.463 [ms] (mean)
-Time per request:       9.298 [ms] (mean, across all concurrent requests)
-Transfer rate:          18.17 [Kbytes/sec] received
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    459.53 [#/sec] (mean)
+Time per request:       544.033 [ms] (mean)
+Time per request:       2.176 [ms] (mean, across all concurrent requests)
+Transfer rate:          178.16 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:       51   93  66.7     87    1107
-Processing:    79 2228 100.5   2243    3296
-Waiting:       72 1493 224.0   1462    2984
-Total:        142 2320 116.1   2335    3425
+Connect:       52  121 167.6     88    1166
+Processing:    61  417 140.2    435    1043
+Waiting:       52  318 134.6    313     931
+Total:        121  539 220.2    533    1698
 
 Percentage of the requests served within a certain time (ms)
-  50%   2335
-  66%   2355
-  75%   2357
-  80%   2360
-  90%   2393
-  95%   2425
-  98%   2514
-  99%   2554
- 100%   3425 (longest request)
+  50%    533
+  66%    600
+  75%    629
+  80%    653
+  90%    710
+  95%    747
+  98%   1435
+  99%   1493
+ 100%   1698 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=sotr&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      250
+Time taken for tests:   32.311 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    386.86 [#/sec] (mean)
+Time per request:       646.224 [ms] (mean)
+Time per request:       2.585 [ms] (mean, across all concurrent requests)
+Transfer rate:          149.98 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       51  115 147.7     91    1116
+Processing:    64  526 195.5    533     942
+Waiting:       53  415 198.9    418     928
+Total:        120  642 246.1    641    1676
+
+Percentage of the requests served within a certain time (ms)
+  50%    641
+  66%    694
+  75%    760
+  80%    816
+  90%    931
+  95%    974
+  98%   1462
+  99%   1610
+ 100%   1676 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=sotr&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      250
+Time taken for tests:   27.099 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    461.27 [#/sec] (mean)
+Time per request:       541.985 [ms] (mean)
+Time per request:       2.168 [ms] (mean, across all concurrent requests)
+Transfer rate:          178.83 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       51  117 143.6     92    1145
+Processing:    63  421 139.3    467     815
+Waiting:       50  318 128.8    311     630
+Total:        115  538 201.7    566    1720
+
+Percentage of the requests served within a certain time (ms)
+  50%    566
+  66%    613
+  75%    629
+  80%    645
+  90%    683
+  95%    719
+  98%   1230
+  99%   1519
+ 100%   1720 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=sotr&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      250
+Time taken for tests:   26.441 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    472.75 [#/sec] (mean)
+Time per request:       528.819 [ms] (mean)
+Time per request:       2.115 [ms] (mean, across all concurrent requests)
+Transfer rate:          183.28 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       51  102  98.2     87    2119
+Processing:    58  419 139.9    455    1393
+Waiting:       55  306 123.1    302    1106
+Total:        110  522 176.2    549    2462
+
+Percentage of the requests served within a certain time (ms)
+  50%    549
+  66%    609
+  75%    629
+  80%    648
+  90%    681
+  95%    708
+  98%    793
+  99%    991
+ 100%   2462 (longest request)

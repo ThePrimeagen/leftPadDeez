@@ -21,6 +21,16 @@ exports.nativePadStart = function(str, len, ch) {
     return str.padStart(len, ch);
 }
 
+
+
+
+
+
+
+
+
+
+
 exports.leftPad = function(str, len, ch) {
     str = String(str);
     var i = -1;
@@ -31,6 +41,29 @@ exports.leftPad = function(str, len, ch) {
     }
     return str;
 }
+
+function time(count) {
+    const start = Date.now();
+    for (let i = 0; i < count; ++i) {
+        exports.leftPad("foo", 1000);
+    }
+    return Date.now() - start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const asciiBuffer = Buffer.alloc(1024 * 500);
 exports.bufferAsciiSpecialCase = function(str, len, ch) {

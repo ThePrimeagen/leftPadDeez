@@ -81,17 +81,17 @@ const server = http.createServer((req, res) => {
 
     const outBuffer = [];
     const buffersUsed = [];
-    for (let i = 0; i < 1000; ++i) {
+    for (let i = 0; i < 100; ++i) {
         let out = undefined;
         if (name === "buffer") {
             const outerBuffer = bufferPool.get();
             out = laases[name](str, len, char, outerBuffer);
-            outBuffer.push(out.subarray(0, 5).toString());
+            outBuffer.push(out.toString());
 
             buffersUsed.push(outerBuffer);
         } else {
             out = laases[name](str, len, char);
-            outBuffer.push(out.substring(0, 5));
+            outBuffer.push(out);
         }
     }
 

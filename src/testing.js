@@ -8,12 +8,18 @@ function fun(fn, count, ...args) {
     return performance.now() - start;
 }
 
+function round(x) {
+    return Math.floor(x * 100) / 100;
+}
+
 function testLeftpad(fn, name, range = [10, 100, 1000, 10000]) {
+    const result = [];
     range.forEach(x => {
         range.forEach(y => {
-            console.log(name, x, y, fun(fn, x, "foo", y));
+            result.push([name, round(fun(fn, x, "foo", y))]);
         });
     });
+    return result;
 }
 
 function testSpeed({fn, name, repeats}, ...args) {

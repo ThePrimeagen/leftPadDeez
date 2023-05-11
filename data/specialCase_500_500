@@ -1,0 +1,168 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=specialCase&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      500
+Time taken for tests:   17.191 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    727.13 [#/sec] (mean)
+Time per request:       687.633 [ms] (mean)
+Time per request:       1.375 [ms] (mean, across all concurrent requests)
+Transfer rate:          281.91 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       55  259 444.8    116    7227
+Processing:    64  236 244.2    164    6767
+Waiting:       56  182 216.4    131    6767
+Total:        123  494 525.1    308    9902
+
+Percentage of the requests served within a certain time (ms)
+  50%    308
+  66%    364
+  75%    468
+  80%    600
+  90%   1250
+  95%   1346
+  98%   1711
+  99%   3289
+ 100%   9902 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=specialCase&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      500
+Time taken for tests:   13.115 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    953.09 [#/sec] (mean)
+Time per request:       524.607 [ms] (mean)
+Time per request:       1.049 [ms] (mean, across all concurrent requests)
+Transfer rate:          369.51 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       54  233 456.6    128    7380
+Processing:    65  238 195.1    174    3477
+Waiting:       53  181 166.5    139    3477
+Total:        122  471 506.3    318    7603
+
+Percentage of the requests served within a certain time (ms)
+  50%    318
+  66%    354
+  75%    398
+  80%    455
+  90%    863
+  95%   1321
+  98%   1672
+  99%   2152
+ 100%   7603 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=specialCase&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      500
+Time taken for tests:   14.893 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    839.34 [#/sec] (mean)
+Time per request:       595.707 [ms] (mean)
+Time per request:       1.191 [ms] (mean, across all concurrent requests)
+Transfer rate:          325.41 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       52  254 548.4    118    7366
+Processing:    64  220 202.9    153    2914
+Waiting:       51  175 183.3    130    2881
+Total:        116  474 593.3    285    7476
+
+Percentage of the requests served within a certain time (ms)
+  50%    285
+  66%    326
+  75%    410
+  80%    585
+  90%   1246
+  95%   1326
+  98%   1654
+  99%   2255
+ 100%   7476 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=specialCase&str=foo&len=500
+Document Length:        272 bytes
+
+Concurrency Level:      500
+Time taken for tests:   15.422 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      4962500 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    810.53 [#/sec] (mean)
+Time per request:       616.879 [ms] (mean)
+Time per request:       1.234 [ms] (mean, across all concurrent requests)
+Transfer rate:          314.24 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       49  267 524.8    119    8353
+Processing:    67  226 264.7    156    6213
+Waiting:       54  173 236.9    126    6209
+Total:        119  493 608.3    294    8531
+
+Percentage of the requests served within a certain time (ms)
+  50%    294
+  66%    334
+  75%    375
+  80%    601
+  90%   1247
+  95%   1338
+  98%   1991
+  99%   3374
+ 100%   8531 (longest request)

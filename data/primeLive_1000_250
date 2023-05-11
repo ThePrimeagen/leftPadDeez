@@ -10,33 +10,159 @@ Server Hostname:        198.58.97.4
 Server Port:            42068
 
 Document Path:          /?name=primeLive&str=foo&len=1000
-Document Length:        49 bytes
+Document Length:        336 bytes
 
 Concurrency Level:      250
-Time taken for tests:   234.455 seconds
-Complete requests:      25000
+Time taken for tests:   26.863 seconds
+Complete requests:      12500
 Failed requests:        0
-Total transferred:      4350000 bytes
-HTML transferred:       1225000 bytes
-Requests per second:    106.63 [#/sec] (mean)
-Time per request:       2344.547 [ms] (mean)
-Time per request:       9.378 [ms] (mean, across all concurrent requests)
-Transfer rate:          18.12 [Kbytes/sec] received
+Total transferred:      5762500 bytes
+HTML transferred:       4200000 bytes
+Requests per second:    465.33 [#/sec] (mean)
+Time per request:       537.254 [ms] (mean)
+Time per request:       2.149 [ms] (mean, across all concurrent requests)
+Transfer rate:          209.49 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:       48   97  82.5     89    2078
-Processing:    75 2242 141.0   2256    4653
-Waiting:       62 1556 349.5   1467    4060
-Total:        134 2339 143.7   2353    5747
+Connect:       53   99  83.1     89    1160
+Processing:    69  435 140.0    471     767
+Waiting:       55  336 135.1    347     645
+Total:        123  534 167.2    566    1653
 
 Percentage of the requests served within a certain time (ms)
-  50%   2353
-  66%   2356
-  75%   2361
-  80%   2376
-  90%   2428
-  95%   2513
-  98%   2577
-  99%   2628
- 100%   5747 (longest request)
+  50%    566
+  66%    608
+  75%    632
+  80%    647
+  90%    691
+  95%    716
+  98%    773
+  99%    834
+ 100%   1653 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=primeLive&str=foo&len=1000
+Document Length:        336 bytes
+
+Concurrency Level:      250
+Time taken for tests:   27.496 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      5762500 bytes
+HTML transferred:       4200000 bytes
+Requests per second:    454.62 [#/sec] (mean)
+Time per request:       549.912 [ms] (mean)
+Time per request:       2.200 [ms] (mean, across all concurrent requests)
+Transfer rate:          204.67 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       50  120 167.1     87    1130
+Processing:    66  425 145.8    463    1738
+Waiting:       54  323 131.0    315    1112
+Total:        119  545 227.4    555    1866
+
+Percentage of the requests served within a certain time (ms)
+  50%    555
+  66%    600
+  75%    633
+  80%    650
+  90%    702
+  95%    774
+  98%   1409
+  99%   1612
+ 100%   1866 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=primeLive&str=foo&len=1000
+Document Length:        336 bytes
+
+Concurrency Level:      250
+Time taken for tests:   27.832 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      5762500 bytes
+HTML transferred:       4200000 bytes
+Requests per second:    449.12 [#/sec] (mean)
+Time per request:       556.646 [ms] (mean)
+Time per request:       2.227 [ms] (mean, across all concurrent requests)
+Transfer rate:          202.19 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       50  101  91.7     90    1132
+Processing:    62  450 135.5    498     681
+Waiting:       55  347 136.2    347     627
+Total:        115  551 171.9    594    1623
+
+Percentage of the requests served within a certain time (ms)
+  50%    594
+  66%    634
+  75%    655
+  80%    669
+  90%    710
+  95%    728
+  98%    743
+  99%    756
+ 100%   1623 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 198.58.97.4 (be patient)
+
+
+Server Software:        
+Server Hostname:        198.58.97.4
+Server Port:            42068
+
+Document Path:          /?name=primeLive&str=foo&len=1000
+Document Length:        336 bytes
+
+Concurrency Level:      250
+Time taken for tests:   27.066 seconds
+Complete requests:      12500
+Failed requests:        0
+Total transferred:      5762500 bytes
+HTML transferred:       4200000 bytes
+Requests per second:    461.83 [#/sec] (mean)
+Time per request:       541.319 [ms] (mean)
+Time per request:       2.165 [ms] (mean, across all concurrent requests)
+Transfer rate:          207.92 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       50  111 137.5     88    2109
+Processing:    67  423 145.9    454    2630
+Waiting:       54  322 134.7    326    2629
+Total:        117  535 202.4    552    3726
+
+Percentage of the requests served within a certain time (ms)
+  50%    552
+  66%    602
+  75%    635
+  80%    648
+  90%    697
+  95%    731
+  98%   1160
+  99%   1509
+ 100%   3726 (longest request)
